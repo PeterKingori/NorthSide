@@ -1,3 +1,56 @@
-.navbar {
-	background-color: bisque;
+header {
+	position: relative;
+	background-color: black;
+	height: 80vh;
+	min-height: 25rem;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+header video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: 0;
+	transform: translate(-50%, -50%);
+}
+
+header .container {
+	position: relative;
+	z-index: 2;
+}
+
+
+header .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.3;
+	z-index: 1;
+}
+
+.side-img {
+	background-image: url(../img/eating-pizza.jpg);
+	height: 80vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('../img/pizza-closeup.jpg') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
 }
