@@ -1,3 +1,7 @@
+body {
+	font-family: 'Nunito', sans-serif;
+}
+
 nav .order {
 	background-color: red;
 	border: 0;
@@ -52,6 +56,15 @@ header .overlay {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.welcome {
+	font-weight: 700;
+}
+
+.welcome-text {
+	text-transform: uppercase;
+	font-weight: 700;
 }
 
 @media (pointer: coarse) and (hover: none) {
