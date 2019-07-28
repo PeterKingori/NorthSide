@@ -27,7 +27,7 @@
 					<li class="nav-item"><a class="nav-link text-danger" href="#menu">Menu</a></li>
 					<li class="nav-item"><a class="nav-link text-danger" href="#gallery">Gallery</a></li>
 				</ul>
-				<button class="btn text-white text-uppercase my-2 my-sm-0 order-button"><a href="#order"></a>Order Online</button>
+				<button class="btn text-uppercase my-2 my-sm-0 order-button"><a class="text-white" href="#order">Order Online</a></button>
 			</div>
 		</div>
 	</nav>
@@ -57,7 +57,6 @@
 		</div>
 	</div>
 	<div id="menu">
-		<!--	<div class="overlay"></div>-->
 		<div class="container pt-4 menu-content">
 			<div class="row text-center text-white mb-3">
 				<div class="col-md-12">
@@ -94,12 +93,88 @@
 		</div>
 	</div>
 
-	<div class="container-fluid order-secton">
+	<div class="container-fluid" id="order">
 		<div class="row">
-			<div class="col-md-6">
-				<div class="row">
-					<button class="btn btn-outline-danger text-white text-uppercase order-button my-3 ml-2" id="orderClicked">Click here to order</button>
+			<div class="col-md-6 mt-5">
+				<div class="row pl-3">
+					<button class="btn btn-outline-danger text-white text-uppercase order-button my-3" id="order-clicked" onclick="">Click here to order</button>
 				</div>
+				<form id="order-form">
+					<div class="row pl-3">
+						<div class="form-group">
+							<label class="text-danger">Choose the size of pizza you want </label>
+							<div class="form-check form-check-inline">
+								<input type="radio" class="form-check-input" name="pizza-size" id="small">
+								<label class="form-check-label" for="small">small</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input type="radio" class="form-check-input" name="pizza-size" id="medium">
+								<label class="form-check-label" for="medium">medium</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input type="radio" class="form-check-input" name="pizza-size" id="small">
+								<label class="form-check-label" for="small">large</label>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<label class="text-danger">Choose the crust you want </label>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="pizza-crust" id="thin-crust" value="thin">
+									<label class="form-check-label" for="thin-crust">thin crust</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="pizza-crust" id="thick-crust" value="thick">
+									<label class="form-check-label" for="thick-crust">thick crust</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="pizza-crust" id="whole-wheat" value="whole-wheat">
+									<label class="form-check-label" for="whole-wheat">whole wheat</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="pizza-crust" id="deep-dish" value="deep-dish">
+									<label class="form-check-label" for="deep-dish">deep dish</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="pizza-crust" id="flatbread" value="flatbread">
+									<label class="form-check-label" for="flatbread">flatbread</label>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-group">
+								<label class="text-danger">Choose the toppings you want</label>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" id="sausage" value="sausage">
+									<label class="form-check-label" for="sausage">italian sausage</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" id="bacon" value="bacon">
+									<label class="form-check-label" for="bacon">bacon</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" id="mushrooms" value="mushrooms">
+									<label class="form-check-label" for="mushrooms">mushrooms</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" id="chicken" value="chicken">
+									<label class="form-check-label" for="chicken">chicken</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" id="meatballs" value="meatballs">
+									<label class="form-check-label" for="meatballs">meatballs</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" id="gar-on-pep" value="gar-on-pep">
+									<label class="form-check-label" for="gar-on-pep">garlic, onions, pepper</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="btn btn-outline-danger text-white text-uppercase order-button my-3" id="order-placed" onclick="">Place order</button>					
+				</form>
 			</div>
 
 			<div class="col-md-6 pizza-order"></div>
