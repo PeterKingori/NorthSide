@@ -81,13 +81,14 @@
 					<p>flatbread -- ksh 60</p>
 				</div>
 				<div class="col-md-4">
-					<h4>TOPPINGS</h4>
-					<p>mama's secret recipe Italian sausage -- ksh 100</p>
-					<p>house smoked bacon -- ksh 120</p>
-					<p>mushrooms -- ksh 80</p>
-					<p>roasted chicken -- ksh 150</p>
-					<p>meatballs -- kshs 180</p>
-					<p>roasted garlic, onions and red pepper -- ksh 60</p>
+					<h4 class="mb-0">TOPPINGS</h4>
+					<small class="mt-0">Prices respective to size of pizza</small>
+					<p>mama's secret recipe Italian sausage -- ksh 100, 150, 200</p>
+					<p>house smoked bacon -- ksh 120, 170, 220</p>
+					<p>mushrooms -- ksh 80, 130, 180</p>
+					<p>roasted chicken -- ksh 150, 200, 250</p>
+					<p>meatballs -- kshs 180, 230, 280</p>
+					<p>roasted garlic, onions and red pepper -- ksh 60, 110, 160</p>
 				</div>
 			</div>
 		</div>
@@ -104,15 +105,15 @@
 						<div class="form-group">
 							<label class="text-danger">Choose the size of pizza you want </label>
 							<div class="form-check form-check-inline">
-								<input type="radio" class="form-check-input" name="pizza-size" id="small">
+								<input type="radio" class="form-check-input" name="pizza-size" id="small" value="small">
 								<label class="form-check-label" for="small">small</label>
 							</div>
 							<div class="form-check form-check-inline">
-								<input type="radio" class="form-check-input" name="pizza-size" id="medium">
+								<input type="radio" class="form-check-input" name="pizza-size" id="medium" value="medium">
 								<label class="form-check-label" for="medium">medium</label>
 							</div>
 							<div class="form-check form-check-inline">
-								<input type="radio" class="form-check-input" name="pizza-size" id="small">
+								<input type="radio" class="form-check-input" name="pizza-size" id="small" value="large">
 								<label class="form-check-label" for="small">large</label>
 							</div>
 						</div>
@@ -147,33 +148,33 @@
 							<div class="form-group">
 								<label class="text-danger">Choose the toppings you want</label>
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" id="sausage" value="sausage">
+									<input class="form-check-input" type="checkbox" id="sausage" value="sausage" name="toppings">
 									<label class="form-check-label" for="sausage">italian sausage</label>
 								</div>
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" id="bacon" value="bacon">
+									<input class="form-check-input" type="checkbox" id="bacon" value="bacon" name="toppings">
 									<label class="form-check-label" for="bacon">bacon</label>
 								</div>
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" id="mushrooms" value="mushrooms">
+									<input class="form-check-input" type="checkbox" id="mushrooms" value="mushrooms" name="toppings">
 									<label class="form-check-label" for="mushrooms">mushrooms</label>
 								</div>
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" id="chicken" value="chicken">
+									<input class="form-check-input" type="checkbox" id="chicken" value="chicken" name="toppings">
 									<label class="form-check-label" for="chicken">chicken</label>
 								</div>
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" id="meatballs" value="meatballs">
+									<input class="form-check-input" type="checkbox" id="meatballs" value="meatballs" name="toppings">
 									<label class="form-check-label" for="meatballs">meatballs</label>
 								</div>
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" id="gar-on-pep" value="gar-on-pep">
+									<input class="form-check-input" type="checkbox" id="gar-on-pep" value="gar-on-pep" name="toppings">
 									<label class="form-check-label" for="gar-on-pep">garlic, onions, pepper</label>
 								</div>
 							</div>
 						</div>
 					</div>
-					<button class="btn btn-outline-danger text-white text-uppercase order-button my-3" id="order-placed" onclick="">Place order</button>					
+					<button class="btn btn-outline-danger text-white text-uppercase order-button my-3" id="order-placed" type="submit">Place order</button>					
 				</form>
 			</div>
 
