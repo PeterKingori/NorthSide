@@ -100,12 +100,13 @@ header .container {
 	text-decoration: underline;
 }
 
-#order {
-	background-color: #eaeaea;
+.pizza-order {
+	background-image: url(../img/pizza-order.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;	
+	height: 100vh;
 }
-
-
-
 
 @media (pointer: coarse) and (hover: none) {
   header {
