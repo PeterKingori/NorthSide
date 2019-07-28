@@ -2,7 +2,7 @@ body {
 	font-family: 'Nunito', sans-serif;
 }
 
-nav .order {
+.order-button {
 	background-color: red;
 	border: 0;
 	border-radius: 0;
@@ -39,8 +39,7 @@ header .container {
 	z-index: 2;
 }
 
-
-header .overlay {
+.overlay {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -73,21 +72,40 @@ header .overlay {
 }
 
 #menu {
-	background-color: #eaeaea;
 	font-family: 'Jura', serif;
+	background-image: url(../img/pizza.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 0;
 }
 
-.menu-heading {
-	font-weight: 700;
-	border-bottom: 3px solid black;
+.bottom-border {
+	border-bottom: 3px solid white;
 	width: 20%;
 	margin: auto;
 	margin-bottom: 1rem;
 }
 
-#menu h4 {
+#menu h4, h2 {
 	font-weight: 700;
 }
+
+.menu-content {
+	font-weight: 700;
+}
+
+.menu-content h4 {
+	text-decoration: underline;
+}
+
+#order {
+	background-color: #eaeaea;
+}
+
+
+
 
 @media (pointer: coarse) and (hover: none) {
   header {

@@ -8,7 +8,7 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 	<script src="js/bootstrap.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Jura:400,700&display=swap" rel="stylesheet">	
+	<link href="https://fonts.googleapis.com/css?family=Jura:400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.css" type="text/css">
 	<script src="js/scripts.js"></script>
 	<title>North Side Pizzas</title>
@@ -27,7 +27,7 @@
 					<li class="nav-item"><a class="nav-link text-danger" href="#menu">Menu</a></li>
 					<li class="nav-item"><a class="nav-link text-danger" href="#gallery">Gallery</a></li>
 				</ul>
-				<button class="btn text-white text-uppercase btn-outline-primary my-2 my-sm-0 order" type="submit">Order Online</button>
+				<button class="btn text-white text-uppercase my-2 my-sm-0 order-button"><a href="#order"></a>Order Online</button>
 			</div>
 		</div>
 	</nav>
@@ -57,14 +57,15 @@
 		</div>
 	</div>
 	<div id="menu">
-		<div class="container pt-4">
-			<div class="row text-center mb-3">
+<!--	<div class="overlay"></div>-->
+		<div class="container pt-4 menu-content">
+			<div class="row text-center text-white mb-3">
 				<div class="col-md-12">
-				<h2 class="menu-heading">MENU</h2>
+					<h2 class="menu-heading bottom-border">MENU</h2>
 					<p>Create your own pizza by choosing the size you want and the kind of crust you prefer.Then select toppings from our variety of delicious ingredients. All our pizzas have a bottom layer of thick, flavorful San Martino tomato sauce and are topped with mozzarella and parmesan cheese.</p>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row text-white">
 				<div class="col-md-4">
 					<h4>SIZES</h4>
 					<p>small</p>
@@ -89,6 +90,28 @@
 					<p>meatballs</p>
 					<p>roasted garlic, onions and red pepper</p>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="order">
+		<div class="container-fluid order-content">
+			<div class="row">
+			<div class="col-md-6">
+				<button class="btn btn-outline-danger text-white text-uppercase order-button my-3" id="orderClicked">Click here to order</button>
+				<form id="order-form">
+					<div class="form-group">
+						<label for="pizza-size">Choose the size of pizza you would like</label>
+						<select id="pizza-size" class="form-control">
+							<option value="small">small</option>
+							<option value="medium">medium</option>
+							<option value="large">large</option>
+						</select>
+					</div>
+					
+				</form>
+			</div>
+			<div class="col-md-6"></div>
 			</div>
 		</div>
 	</div>
