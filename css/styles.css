@@ -108,6 +108,10 @@ header .container {
 	height: 100vh;
 }
 
+#order-form {
+	display: none;
+}
+
 @media (pointer: coarse) and (hover: none) {
   header {
     background: url('../img/pizza-closeup.jpg') black no-repeat center center scroll;
