@@ -1,3 +1,12 @@
+nav .order {
+	background-color: red;
+	border: 0;
+}
+
+nav .order:hover {
+	background-color: red;
+}
+
 header {
 	position: relative;
 	background-color: black;
@@ -44,7 +53,6 @@ header .overlay {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
 
 @media (pointer: coarse) and (hover: none) {
   header {
