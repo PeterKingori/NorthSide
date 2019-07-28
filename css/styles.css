@@ -5,6 +5,7 @@ body {
 nav .order {
 	background-color: red;
 	border: 0;
+	border-radius: 0;
 }
 
 nav .order:hover {
@@ -64,6 +65,27 @@ header .overlay {
 
 .welcome-text {
 	text-transform: uppercase;
+	font-weight: 700;
+}
+
+#about {
+	line-height: 2.25rem;
+}
+
+#menu {
+	background-color: #eaeaea;
+	font-family: 'Jura', serif;
+}
+
+.menu-heading {
+	font-weight: 700;
+	border-bottom: 3px solid black;
+	width: 20%;
+	margin: auto;
+	margin-bottom: 1rem;
+}
+
+#menu h4 {
 	font-weight: 700;
 }
 
