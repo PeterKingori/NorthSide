@@ -52,13 +52,17 @@ $(document).ready(function () {
 		let inputSize = $('input:radio[name="pizza-size"]:checked').val();
 		let inputCrust = $('input:radio[name="pizza-crust"]:checked').val();
 		let newPizza = new Pizza(inputSize, inputCrust);
-
 		let userToppings = [];
 		$.each($('input:checkbox[name="toppings"]:checked'), function () {
 			userToppings.push($(this).val());
 		});
-
-
+		let delivery = $('input:radio[name="delivery"]:checked').val();
+		let deliverycost;
+		if(delivery==='yesdeliver') {
+			deliverycost = 100;
+		} else {
+			deliverycost = 0;
+		}
 		// conditional statements to add prices of toppings to array depending on size of pizza chosen
 		var toppingsCost = [];
 		if (inputSize === 'small') {
@@ -141,7 +145,7 @@ $(document).ready(function () {
 		$('.show-crust').text(newPizza.crust);
 
 
-		var totalCost = newPizza.pizzaCost() + secondCost;
+		var totalCost = newPizza.pizzaCost() + secondCost + deliverycost;
 		document.getElementById('total-cost').innerHTML = totalCost;
 
 
