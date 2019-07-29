@@ -12,10 +12,8 @@ Pizza.prototype.pizzaCost = function () {
 		prices.push(200);
 	} else if (this.size === 'medium') {
 		prices.push(400);
-
 	} else if (this.size === 'large') {
 		prices.push(600);
-
 	}
 	switch (this.crust) {
 		case 'thin':
@@ -34,7 +32,7 @@ Pizza.prototype.pizzaCost = function () {
 			prices.push(60);
 			break;
 	}
-	prices.forEach(function(price) {
+	prices.forEach(function (price) {
 		firstCost += price;
 	})
 	return firstCost;
@@ -59,9 +57,89 @@ $(document).ready(function () {
 		$.each($('input:checkbox[name="toppings"]:checked'), function () {
 			userToppings.push($(this).val());
 		});
-		newPizza.toppings.push(userToppings);
 
-		
+// conditional statements to add prices of toppings to array depending on size of pizza chosen
+		var toppingsCost = [];
+		if (inputSize === 'small') {
+			userToppings.forEach(function (item) {
+				switch (item) {
+					case 'sausage':
+						toppingsCost.push(100);
+						break;
+					case 'bacon':
+						toppingsCost.push(120);
+						break;
+					case 'mushrooms':
+						toppingsCost.push(80);
+						break;
+					case 'chicken':
+						toppingsCost.push(150);
+						break;
+					case 'meatballs':
+						toppingsCost.push(180);
+						break;
+					case 'garonpep':
+						toppingsCost.push(60);
+						break;
+				}
+			})
+		} else if (inputSize === 'medium') {
+			userToppings.forEach(function (item) {
+				switch (item) {
+					case 'sausage':
+						toppingsCost.push(150);
+						break;
+					case 'bacon':
+						toppingsCost.push(170);
+						break;
+					case 'mushrooms':
+						toppingsCost.push(130);
+						break;
+					case 'chicken':
+						toppingsCost.push(200);
+						break;
+					case 'meatballs':
+						toppingsCost.push(230);
+						break;
+					case 'garonpep':
+						toppingsCost.push(110);
+						break;
+				}
+			})
+		} else if (inputSize === 'large') {
+			userToppings.forEach(function (item) {
+				switch (item) {
+					case 'sausage':
+						toppingsCost.push(200);
+						break;
+					case 'bacon':
+						toppingsCost.push(220);
+						break;
+					case 'mushrooms':
+						toppingsCost.push(180);
+						break;
+					case 'chicken':
+						toppingsCost.push(250);
+						break;
+					case 'meatballs':
+						toppingsCost.push(280);
+						break;
+					case 'garonpep':
+						toppingsCost.push(160);
+						break;
+				}
+			})
+		}
+		var secondCost = 0;		
+		toppingsCost.forEach(function (item) {
+			secondCost += item;
 		})
-	
+		var totalCost = newPizza.pizzaCost() + secondCost;
+		document.getElementById('total-cost').innerHTML = totalCost;
+
+
+
+
+	})
+
 })
