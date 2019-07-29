@@ -42,10 +42,10 @@ Pizza.prototype.pizzaCost = function () {
 // user interface logic
 $(document).ready(function () {
 	$('button#order-clicked').click(function () {
-		$('form#order-form').slideDown(2000);
-		$('div.total-pizza-cost').show(2000);
+		$('form#order-form').slideDown('slow');
+		$('div.total-pizza-cost').show('slow');
 	});
-	
+
 	$('form#order-form').submit(function (event) {
 		event.preventDefault();
 
@@ -58,7 +58,8 @@ $(document).ready(function () {
 			userToppings.push($(this).val());
 		});
 
-// conditional statements to add prices of toppings to array depending on size of pizza chosen
+
+		// conditional statements to add prices of toppings to array depending on size of pizza chosen
 		var toppingsCost = [];
 		if (inputSize === 'small') {
 			userToppings.forEach(function (item) {
@@ -130,16 +131,16 @@ $(document).ready(function () {
 				}
 			})
 		}
-		var secondCost = 0;		
+		var secondCost = 0;
 		toppingsCost.forEach(function (item) {
 			secondCost += item;
 		})
-		
+
 		$('#show-order').show();
 		$('.show-size').text(newPizza.size);
 		$('.show-crust').text(newPizza.crust);
-		
-		
+
+
 		var totalCost = newPizza.pizzaCost() + secondCost;
 		document.getElementById('total-cost').innerHTML = totalCost;
 
