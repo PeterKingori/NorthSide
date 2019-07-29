@@ -154,9 +154,6 @@ $(document).ready(function () {
 		var totalCost = newPizza.pizzaCost() + secondCost + deliverycost;
 		document.getElementById('total-cost').innerHTML = totalCost;
 
-
-
-
 	})
 
 })

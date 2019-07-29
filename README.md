@@ -2,6 +2,7 @@
 #### This is a website for a fictional pizza place.
 #### July 2019
 #### By **Peter Kingori Ndegwa**
+![North Side Pizzas](img/northsidepizzas.png)
 ## Description
 This is a website for a fictional pizza place. A user should be able to read information about the restaurant, see the menu, make an order online, enter their location and see a summary of their order including the total cost. The link to the live site is https://peterkingori.github.io/NorthSide/
 ## Setup/Installation Requirements
