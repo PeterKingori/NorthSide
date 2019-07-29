@@ -124,6 +124,7 @@ header .container {
 	background-color: #303030;
 }
 
+/*
 @media (pointer: coarse) and (hover: none) {
   header {
     background: url('../img/pizza-closeup.jpg') black no-repeat center center scroll;
@@ -131,4 +132,4 @@ header .container {
   header video {
     display: none;
   }
-}
+}*/
