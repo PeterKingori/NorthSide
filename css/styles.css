@@ -115,6 +115,10 @@ header .container {
 	display: none;
 }
 
+#show-order {
+	display: none;
+}
+
 @media (pointer: coarse) and (hover: none) {
   header {
     background: url('../img/pizza-closeup.jpg') black no-repeat center center scroll;

@@ -42,10 +42,10 @@ Pizza.prototype.pizzaCost = function () {
 // user interface logic
 $(document).ready(function () {
 	$('button#order-clicked').click(function () {
-		$('form#order-form').show();
-		$('div.total-pizza-cost').show();
+		$('form#order-form').slideDown(2000);
+		$('div.total-pizza-cost').show(2000);
 	});
-
+	
 	$('form#order-form').submit(function (event) {
 		event.preventDefault();
 
@@ -134,6 +134,12 @@ $(document).ready(function () {
 		toppingsCost.forEach(function (item) {
 			secondCost += item;
 		})
+		
+		$('#show-order').show();
+		$('.show-size').text(newPizza.size);
+		$('.show-crust').text(newPizza.crust);
+		
+		
 		var totalCost = newPizza.pizzaCost() + secondCost;
 		document.getElementById('total-cost').innerHTML = totalCost;
 

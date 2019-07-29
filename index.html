@@ -175,11 +175,21 @@
 					</div>
 					<button class="btn btn-outline-danger text-white text-uppercase order-button my-3" id="order-placed" type="submit">Place order</button>
 				</form>
+				<div id="show-order" class="my-3">
+					<h4 class="my-0">Order details</h4>
+					<p class="my-1">Pizza size : <span class="show-size"></span></p>
+					<p class="my-1">Pizza crust : <span class="show-crust"></span></p>
+				</div>
 				<div class="total-pizza-cost">
-					<h4>Your total cost is :</h4>
-					<h4 id="total-cost">Ksh </h4>
+					<h5>Your total cost is :</h5>
+					<h5 id="total-cost">Ksh </h5>
 				</div>
 			</div>
+			<!--
+					<h5>Would you like your pizza delivered?</h5>
+					<button class="btn btn-success" onclick="buttonClicked(this.id)" id="yesButton">Yes</button>
+					<button class="btn btn-outline-warning" onclick="buttonClicked(this.id)" id="noButton">No</button>					
+-->
 
 			<div class="col-md-6 pizza-order"></div>
 		</div>
