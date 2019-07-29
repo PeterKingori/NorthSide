@@ -111,6 +111,9 @@ header .container {
 #order-form {
 	display: none;
 }
+.total-pizza-cost {
+	display: none;
+}
 
 @media (pointer: coarse) and (hover: none) {
   header {

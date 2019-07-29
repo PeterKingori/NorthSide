@@ -2,47 +2,66 @@
 function Pizza(size, crust) {
 	this.size = size;
 	this.crust = crust;
-	this.toppings = [];
 }
 
-Pizza.prototype.allToppings = function() {
-	return this.size + ',' + this.crust + ',' + this.toppings;
+
+Pizza.prototype.pizzaCost = function () {
+	var firstCost = 0;
+	var prices = [];
+	if (this.size === 'small') {
+		prices.push(200);
+	} else if (this.size === 'medium') {
+		prices.push(400);
+
+	} else if (this.size === 'large') {
+		prices.push(600);
+
+	}
+	switch (this.crust) {
+		case 'thin':
+			prices.push(50);
+			break;
+		case 'thick':
+			prices.push(70);
+			break;
+		case 'wheat':
+			prices.push(90);
+			break;
+		case 'deep':
+			prices.push(120);
+			break;
+		case 'flatbread':
+			prices.push(60);
+			break;
+	}
+	prices.forEach(function(price) {
+		firstCost += price;
+	})
+	return firstCost;
 }
+
 
 // user interface logic
 $(document).ready(function () {
 	$('button#order-clicked').click(function () {
 		$('form#order-form').show();
+		$('div.total-pizza-cost').show();
 	});
 
 	$('form#order-form').submit(function (event) {
 		event.preventDefault();
 
-		var inputSize = $('input:radio[name="pizza-size"]:checked').val();
-		var inputCrust = $('input:radio[name="pizza-crust"]:checked').val();
-		var newPizza = new Pizza(inputSize, inputCrust);
-		
-		var userToppings = [];
-		$.each($('input:checkbox[name="toppings"]:checked'), function() {
+		let inputSize = $('input:radio[name="pizza-size"]:checked').val();
+		let inputCrust = $('input:radio[name="pizza-crust"]:checked').val();
+		let newPizza = new Pizza(inputSize, inputCrust);
+
+		let userToppings = [];
+		$.each($('input:checkbox[name="toppings"]:checked'), function () {
 			userToppings.push($(this).val());
 		});
 		newPizza.toppings.push(userToppings);
+
 		
-		
-//		$('.toppings').each(function () {
-//			var inputSausage = $(this).find('input.sausage').val();
-//			var inputBacon = $(this).find('input.bacon').val();
-//			var inputMushrooms = $(this).find('input.mushrooms').val();
-//			var inputChicken = $(this).find('input.chicken').val();
-//			var inputMeatballs = $(this).find('input.meatballs').val();
-//			var inputGaronpep = $(this).find('input.garonpep').val();
-//			var newTopping = new Topping(inputSausage, inputBacon, inputMushrooms, inputChicken, inputMeatballs, inputGaronpep);
-//			newPizza.toppings.push(newTopping);
-//		alert('The values are ' + newTopping.allToppings());			
-//		});
-
-	})
-
-
-
+		})
+	
 })
