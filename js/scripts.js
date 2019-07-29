@@ -59,7 +59,10 @@ $(document).ready(function () {
 		
 		let delivery = $('input:radio[name="delivery"]:checked').val();
 		let deliverycost;
+		let location;
 		if(delivery==='yesdeliver') {
+			location = prompt('What is your location?');
+			alert('Your pizza will be delivered to your location');
 			deliverycost = 100;
 		} else {
 			deliverycost = 0;
@@ -145,6 +148,7 @@ $(document).ready(function () {
 		$('.show-size').text(newPizza.size);
 		$('.show-crust').text(newPizza.crust);
 		$('.show-toppings').text(userToppings);
+		$('.show-delivery').text(location);
 
 
 		var totalCost = newPizza.pizzaCost() + secondCost + deliverycost;
