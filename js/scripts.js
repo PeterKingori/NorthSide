@@ -56,6 +56,7 @@ $(document).ready(function () {
 		$.each($('input:checkbox[name="toppings"]:checked'), function () {
 			userToppings.push($(this).val());
 		});
+		
 		let delivery = $('input:radio[name="delivery"]:checked').val();
 		let deliverycost;
 		if(delivery==='yesdeliver') {
@@ -143,6 +144,7 @@ $(document).ready(function () {
 		$('#show-order').show();
 		$('.show-size').text(newPizza.size);
 		$('.show-crust').text(newPizza.crust);
+		$('.show-toppings').text(userToppings);
 
 
 		var totalCost = newPizza.pizzaCost() + secondCost + deliverycost;
