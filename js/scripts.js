@@ -4,7 +4,6 @@ function Pizza(size, crust) {
 	this.crust = crust;
 }
 
-
 Pizza.prototype.pizzaCost = function () {
 	var firstCost = 0;
 	var prices = [];
@@ -42,8 +41,8 @@ Pizza.prototype.pizzaCost = function () {
 // user interface logic
 $(document).ready(function () {
 	$('button#order-clicked').click(function () {
-		$('form#order-form').slideDown('slow');
-		$('div.total-pizza-cost').show('slow');
+		$('form#order-form').slideDown();
+		$('div.total-pizza-cost').show();
 	});
 
 	$('form#order-form').submit(function (event) {
