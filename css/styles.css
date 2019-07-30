@@ -123,6 +123,14 @@ header .container {
 	background-color: #303030;
 }
 
+.social {
+	color: white;
+}
+
+.social:hover {
+	color: red;
+}
+
 @media (pointer: coarse) and (hover: none) {
   header {
     background: url('../img/pizza-closeup.jpg') black no-repeat center center scroll;
