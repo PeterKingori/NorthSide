@@ -55,7 +55,8 @@ $(document).ready(function () {
 		$.each($('input:checkbox[name="toppings"]:checked'), function () {
 			userToppings.push($(this).val());
 		});
-		
+		let pizzaNumber = parseInt($('#pizza-number').val());
+		console.log(pizzaNumber);
 		let delivery = $('input:radio[name="delivery"]:checked').val();
 		let deliverycost;
 		let location;
@@ -150,7 +151,7 @@ $(document).ready(function () {
 		$('.show-delivery').text(location);
 
 
-		var totalCost = newPizza.pizzaCost() + secondCost + deliverycost;
+		var totalCost = ((newPizza.pizzaCost() + secondCost) * pizzaNumber) + deliverycost;
 		document.getElementById('total-cost').innerHTML = totalCost;
 
 	})
